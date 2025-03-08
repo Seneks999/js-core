@@ -1,0 +1,20 @@
+.ct-header-social.icons-social > a > i.fab {
+  color: #ff5900;
+  font-size: 30px;
+}
+
+.ct-header-social.icons-social > a > i.fab:active {
+  color: #4b4b4b;
+}
+
+code {
+  color: green;
+  font-size: 18px;
+  background-color: #e2e2e2;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 999px;
+  margin: 0 auto;
+}

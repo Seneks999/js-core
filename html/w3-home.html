@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <script src="../js/w3-home.js" defer></script>
+
+    <!-- <script>
+      function myFunction() {
+        document.getElementById("demo7").innerHTML = "Paragraph changed.";
+      }
+    </script> -->
+
+    <title>w3-home</title>
+  </head>
+  <body>
+    <h2>What Can JavaScript Do?</h2>
+
+    <p id="demo">JavaScript can change HTML content.</p>
+
+    <button
+      type="button"
+      onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'
+    >
+      Click Me!
+    </button>
+
+    <h2>What Can JavaScript Do?</h2>
+
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <p>
+      In this case JavaScript changes the value of the src (source) attribute of
+      an image.
+    </p>
+
+    <button
+      onclick="document.getElementById('myImage').src='../img/pic_bulbon.gif'"
+    >
+      Turn on the light
+    </button>
+    <img id="myImage" src="../img/pic_bulboff.gif" style="width: 100px" />
+    <button
+      onclick="document.getElementById('myImage').src='../img/pic_bulboff.gif'"
+    >
+      Turn off the light
+    </button>
+
+    <hr />
+
+    <h5>Ось як називаються елементи в цьому коді:</h5>
+
+    <code>button</code>
+    <p><b>Назва</b>: Тег (елемент HTML). <b>Призначення</b>: Створює кнопку.</p>
+
+    <code>onclick</code>
+    <p>
+      <b>Назва</b>: Атрибут HTML. <b>Призначення</b>: Виконує JavaScript код під
+      час кліку на елемент.
+    </p>
+
+    <code>document.getElementById('myImage')</code>
+    <p>
+      <b>Назва</b>: Метод JavaScript. <b>Призначення</b>: Повертає HTML елемент
+      із вказаним id. У цьому випадку — елемент з id="myImage".
+    </p>
+
+    <code>.src</code>
+    <p>
+      <b>Назва</b>: Властивість JavaScript. <b>Призначення</b>: Визначає або
+      змінює джерело зображення (src) у тегу img.
+    </p>
+
+    <code>img</code>
+
+    <p>
+      <b>Назва</b>: Тег (елемент HTML). <b>Призначення</b>: Додає зображення на
+      вебсторінку.
+    </p>
+
+    <code>id="myImage"</code>
+    <p>
+      <b>Назва</b>: Атрибут HTML. <b>Призначення</b>: Встановлює унікальний
+      ідентифікатор для елемента.
+    </p>
+
+    <code>src="../img/pic_bulboff.gif"</code>
+    <p>
+      <b>Назва</b>: Атрибут HTML. <b>Призначення</b>: Визначає шлях до
+      зображення, яке буде відображено.
+    </p>
+
+    <code>style="width: 100px"</code>
+    <p>
+      <b>Назва</b>: Атрибут HTML (інлайн-стилі). <b>Призначення</b>: Задає
+      CSS-стиль для елемента, тут — ширина зображення.
+    </p>
+
+    <p>Turn on the light та Turn off the light</p>
+    <p>
+      <b>Назва</b>: Текстовий вміст (текстовий вузол). <b>Призначення</b>:
+      Відображає текст всередині кнопки.
+    </p>
+
+    <p id="demo2">JavaScript can change the style of an HTML element.</p>
+    <button
+      type="button"
+      onclick="document.getElementById('demo2').style.fontSize='35px'"
+    >
+      Click Me!
+    </button>
+
+    <p id="demo3">JavaScript can hide HTML elements.</p>
+    <button
+      type="button"
+      onclick="document.getElementById('demo3').style.display='none'"
+    >
+      Click Me!
+    </button>
+
+    <h2>What Can JavaScript Do?</h2>
+    <p>JavaScript can show hidden HTML elements.</p>
+    <p id="demo4" style="display: none">Hello JavaScript!</p>
+    <button
+      type="button"
+      onclick="document.getElementById('demo4').style.display='block'"
+    >
+      Turn on. Click Me!
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('demo4').style.display='none'"
+    >
+      Turn off. Click Me!
+    </button>
+
+    <h2>What Can JavaScript Do?</h2>
+
+    <p id="demo5">JavaScript can change the style of an HTML element.</p>
+
+    <button
+      type="button"
+      onclick="document.getElementById('demo5').style.fontSize='35px'"
+    >
+      Click Me!
+    </button>
+
+    <h2>What Can JavaScript Do?</h2>
+
+    <p id="demo6">JavaScript can hide HTML elements.</p>
+
+    <button
+      type="button"
+      onclick="document.getElementById('demo6').style.display='none'"
+    >
+      Click Me!
+    </button>
+
+    <h2>Demo JavaScript in Head</h2>
+    <p id="demo7">A Paragraph.</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+
+    <h4>JavaScript can "display" data in different ways:</h4>
+
+    <p>Writing into an HTML element, using <code>innerHTML</code>.</p>
+    <p>Writing into the HTML output using <code>document.write()</code>.</p>
+    <p>Writing into an alert box, using <code>window.alert()</code>.</p>
+    <p>Writing into the browser console, using <code>console.log()</code>.</p>
+
+    <h1>My 8 Web Page</h1>
+    <p>My 8 Paragraph</p>
+
+    <p id="demo8"></p>
+
+    <script>
+      document.getElementById("demo8").innerHTML = 5 + 6;
+    </script>
+
+    <p>
+      Never call document.write after the document has finished loading. It will
+      overwrite the whole document.
+    </p>
+
+    <script>
+      document.write(5 + 6);
+    </script>
+
+    <script>
+      document.write(5 * 6);
+
+      document.write(6 / 6);
+    </script>
+
+    <h4>
+      Using document.write() after an HTML document is loaded, will delete all
+      existing HTML:
+    </h4>
+    <button type="button" onclick="document.write(9 + 9)">Try it</button>
+
+    <!-- <script>
+      window.alert(5 + 5);
+    </script> -->
+
+    <p>You can skip the window keyword.</p>
+    <p>
+      In JavaScript, the window object is the global scope object. This means
+      that variables, properties, and methods by default belong to the window
+      object. This also means that specifying the window keyword is optional:
+    </p>
+    <!-- <script>
+      alert(5 + 6);
+    </script> -->
+    <p>
+      For debugging purposes, you can call the console.log() method in the
+      browser to display data.
+    </p>
+    <script>
+      console.log(15 + 6);
+    </script>
+
+    <h2>JavaScript Statements</h2>
+
+    <p>
+      A <b>JavaScript program</b> is a list of <b>statements</b> to be executed
+      by a computer.
+    </p>
+
+    <p id="demo9"></p>
+
+    <script>
+      let x, y, z; // Statement 1
+      x = 5; // Statement 2
+      y = 6; // Statement 3
+      z = x + y; // Statement 4
+
+      document.getElementById("demo9").innerHTML =
+        "The value of z is " + z + ".";
+    </script>
+
+    <p>
+      A computer program is a list of "instructions" to be "executed" by a
+      computer.
+    </p>
+    <p>
+      In a programming language, these programming instructions are called
+      statements.
+    </p>
+    <p>A JavaScript program is a list of programming statements.</p>
+    <p>In HTML, JavaScript programs are executed by the web browser.</p>
+    <p>JavaScript statements are composed of:</p>
+    <p>Values, Operators, Expressions, Keywords, and Comments.</p>
+    <p>
+      This statement tells the browser to write "Hello Dolly." inside an HTML
+      element with id="demo":
+    </p>
+
+    <p id="demo10"></p>
+
+    <script>
+      document.getElementById("demo10").innerHTML = "Hello Dolly.";
+    </script>
+    <p>
+      The statements are executed, one by one, in the same order as they are
+      written.
+    </p>
+    <p>Semicolons separate JavaScript statements.</p>
+
+    <p>JavaScript statements are separated by semicolons.</p>
+
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+
+    <script>
+      let a, b, c;
+      a = 5;
+      b = 6;
+      c = a + b;
+      document.getElementById("demo11").innerHTML = c;
+      document.getElementById("demo12").innerHTML = c;
+    </script>
+
+    <p>Multiple statements on one line are allowed.</p>
+    <p>
+      Ending statements with semicolon is not required, but highly recommended.
+    </p>
+    <p>
+      JavaScript ignores multiple spaces. You can add white space to your script
+      to make it more readable.
+    </p>
+    <p>
+      A good practice is to put spaces around operators (
+      <code>= + - * /</code> ):
+    </p>
+    <code>let x = y + z; </code>
+
+    <h4>JavaScript Line Length and Line Breaks</h4>
+    <p>
+      For best readability, programmers often like to avoid code lines longer
+      than 80 characters.
+    </p>
+    <p>
+      If a JavaScript statement does not fit on one line, the best place to
+      break it is after an operator:
+    </p>
+    <p>The best place to break a code line is after an operator or a comma.</p>
+
+    <p id="demo13"></p>
+
+    <script>
+      document.getElementById("demo13").innerHTML = "Hello Dolly!";
+    </script>
+    <p>
+      JavaScript statements can be grouped together in code blocks, inside curly
+      brackets {...}.
+    </p>
+    <p>
+      One place you will find statements grouped together in blocks, is in
+      JavaScript functions:
+    </p>
+
+    <p>JavaScript code blocks are written between <code>{ and }</code></p>
+
+    <button type="button" onclick="myFunction2()">Click Me!</button>
+
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+
+    <script>
+      function myFunction2() {
+        document.getElementById("demo14").innerHTML = "Hello Dolly!";
+        document.getElementById("demo15").innerHTML = "How are you?";
+      }
+    </script>
+
+    <h4>JavaScript Keywords</h4>
+    <p><code>var</code> Declares a variable</p>
+    <p><code>let</code> Declares a block variable</p>
+    <p><code>const</code> Declares a block constant</p>
+    <p>
+      <code>if</code> Marks a block of statements to be executed on a condition
+    </p>
+    <p>
+      <code>switch</code> Marks a block of statements to be executed in
+      different cases
+    </p>
+    <p><code>function</code> Declares a function</p>
+    <p><code>return</code> Exits a function</p>
+    <p><code>try</code> Implements error handling to a block of statements</p>
+    <p>
+      JavaScript keywords are reserved words. Reserved words cannot be used as
+      names for variables.
+    </p>
+    <h4></h4>
+    <p>
+      JavaScript syntax is the set of rules, how JavaScript programs are
+      constructed:
+    </p>
+
+    <script>
+      // How to create variables:
+      // var x;
+      // let y;
+
+      // How to use variables:
+      // x = 5;
+      // y = 6;
+      // let z = x + y;
+    </script>
+
+    <p>The JavaScript syntax defines two types of values:</p>
+
+    <p>Fixed values</p>
+    <p>Variable values</p>
+
+    <h4>JavaScript Literals</h4>
+    <p>The two most important syntax rules for fixed values are:</p>
+    <p>1. <b>Numbers</b> are written with or without decimals:</p>
+    <p id="demo16"></p>
+    <script>
+      document.getElementById("demo16").innerHTML = 10.5;
+    </script>
+
+    <p>2. <b>Strings</b> are text, written within double or single quotes:</p>
+    <p id="demo17"></p>
+    <script>
+      document.getElementById("demo17").innerHTML = "John Doe";
+    </script>
+
+    <h4>JavaScript Variables</h4>
+    <p>In a programming language, variables are used to store data values.</p>
+    <p>JavaScript uses the keywords var, let and const to declare variables.</p>
+    <p>An equal sign is used to assign values to variables.</p>
+    <p>
+      In this example, x is defined as a variable. Then, x is assigned (given)
+      the value 6:
+    </p>
+    <p id="demo18"></p>
+
+    <script>
+      let xx;
+      xx = 6;
+      document.getElementById("demo18").innerHTML = xx;
+    </script>
+
+    <h4>JavaScript Operators</h4>
+    <p>JavaScript uses arithmetic operators ( + - * / ) to compute values:</p>
+    <p>
+      JavaScript uses arithmetic operators to compute values (just like
+      algebra).
+    </p>
+    <p id="demo19"></p>
+    <script>
+      document.getElementById("demo19").innerHTML = (5 + 6) * 10;
+    </script>
+
+    <p>
+      JavaScript uses an assignment operator ( = ) to assign values to
+      variables:
+    </p>
+    <h2>Assigning JavaScript Values</h2>
+
+    <p>In JavaScript the = operator is used to assign values to variables.</p>
+
+    <p id="demo20"></p>
+    <script>
+      let x20, y20;
+      x20 = 5;
+      y20 = 6;
+      document.getElementById("demo20").innerHTML = x20 + y20;
+    </script>
+
+    <h2>JavaScript Expressions</h2>
+    <p>
+      An expression is a combination of values, variables, and operators, which
+      computes to a value.
+    </p>
+    <p>The computation is called an evaluation.</p>
+    <p>For example, 5 * 10 evaluates to 50:</p>
+    <p>Expressions compute to values.</p>
+    <p id="demo21"></p>
+    <script>
+      document.getElementById("demo21").innerHTML = 5 * 10;
+    </script>
+
+    <h2>JavaScript Expressions</h2>
+    <p>Expressions can also contain variable values:</p>
+    <p>Expressions compute to values.</p>
+    <p id="demo22"></p>
+    <script>
+      var x22;
+      x22 = 5;
+      document.getElementById("demo22").innerHTML = x22 * 10;
+    </script>
+
+    <p>The values can be of various types, such as numbers and strings.</p>
+    <p>For example, "John" + " " + "Doe", evaluates to "John Doe":</p>
+    <h2>JavaScript Expressions</h2>
+    <p>Expressions compute to values.</p>
+    <p id="demo23"></p>
+    <script>
+      document.getElementById("demo23").innerHTML = "John" + " " + "Doe";
+    </script>
+
+    <h4>JavaScript Keywords</h4>
+    <p>JavaScript Keywords are used to identify actions to be performed.</p>
+    <p>The <code>let</code> keyword tells the browser to create variables:</p>
+    <p id="demo24"></p>
+    <script>
+      let x24, y24;
+      x24 = 5 + 6;
+      y24 = x24 * 10;
+      document.getElementById("demo24").innerHTML = y24;
+    </script>
+
+    <p>The var keyword also tells the browser to create variables:</p>
+    <p id="demo25"></p>
+    <script>
+      var x25, y25;
+      x25 = 5 + 6;
+      y25 = x25 * 10;
+      document.getElementById("demo25").innerHTML = y25;
+    </script>
+
+    <p>Not all JavaScript statements are "executed".</p>
+    <p>
+      Code after double slashes <code>//</code> or between <code>/*</code> and
+      <code>*/</code> is treated as a comment.
+    </p>
+    <p>Comments are ignored, and will not be executed:</p>
+    <p id="demo26"></p>
+    <script>
+      let x26;
+      x26 = 5;
+      // x = 6; I will not be executed
+      document.getElementById("demo26").innerHTML = x26;
+    </script>
+
+    <h4>JavaScript Identifiers / Names</h4>
+    <p>Identifiers are JavaScript names.</p>
+    <p>Identifiers are used to name variables and keywords, and functions.</p>
+    <p>The rules for legal names are the same in most programming languages.</p>
+    <p>A JavaScript name must begin with:</p>
+    <ul>
+      <li>A letter (A-Z or a-z)</li>
+      <li>A dollar sign ($)</li>
+      <li>Or an underscore (_)</li>
+    </ul>
+    <p>Subsequent characters may be letters, digits.</p>
+    <p>Numbers are not allowed as the first character in names.</p>
+    <p>This way JavaScript can easily distinguish identifiers from numbers.</p>
+    <h4>JavaScript is Case Sensitive</h4>
+    <p>All JavaScript identifiers are case sensitive.</p>
+    <p>The variables lastName and lastname, are two different variables:</p>
+    <p id="demo27"></p>
+    <script>
+      let lastname, lastName;
+      lastName = "Doe";
+      lastname = "Peterson";
+      document.getElementById("demo27").innerHTML = lastName;
+    </script>
+    <p>
+      JavaScript does not interpret LET or Let as the keyword <code>let</code>.
+    </p>
+    <p>
+      Historically, programmers have used different ways of joining multiple
+      words into one variable name:
+    </p>
+    <p><b>Hyphens:</b></p>
+    <p>first-name, last-name, master-card, inter-city.</p>
+    <p>
+      Hyphens are not allowed in JavaScript. They are reserved for subtractions.
+    </p>
+    <p><b>Underscore</b></p>
+    <p>first_name, last_name, master_card, inter_city.</p>
+    <p><b>Upper Camel Case (Pascal Case):</b></p>
+    <p>FirstName, LastName, MasterCard, InterCity.</p>
+    <p><b>Lower Camel Case:</b></p>
+    <p>
+      JavaScript programmers tend to use camel case that starts with a lowercase
+      letter:
+    </p>
+    <p>firstName, lastName, masterCard, interCity.</p>
+
+    <p>JavaScript uses the <b>Unicode</b> character set.</p>
+
+    <h4>JavaScript Comments</h4>
+    <p>
+      JavaScript comments can be used to explain JavaScript code, and to make it
+      more readable. JavaScript comments can also be used to prevent execution,
+      when testing alternative code.
+    </p>
+    <p>Single line comments start with <code>//</code>.</p>
+    <p>
+      Any text between <code>//</code> and the end of the line will be ignored
+      by JavaScript (will not be executed).
+    </p>
+
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+    <script>
+      // Change heading:
+      document.getElementById("myH").innerHTML = "JavaScript Comments";
+      // Change paragraph:
+      document.getElementById("myP").innerHTML = "My first paragraph.";
+    </script>
+
+    <p>
+      This example uses a single line comment at the end of each line to explain
+      the code:
+    </p>
+    <h2>JavaScript Comments</h2>
+    <p id="demo28"></p>
+    <script>
+      let x28 = 5; // Declare x28, give it the value of 5
+      let y28 = x28 + 2; // Declare y28, give it the value of x + 2
+      // Write y to demo:
+      document.getElementById("demo28").innerHTML = y28;
+    </script>
+
+    <p>In this example, x29, y29, and z29 are undeclared.</p>
+    <p>They are automatically declared when first used.</p>
+
+    <p id="demo29"></p>
+
+    <script>
+      x29 = 5;
+      y29 = 6;
+      z29 = x29 + y29;
+      document.getElementById("demo29").innerHTML =
+        "The value of z29 is: " + z29;
+    </script>
+
+    <p>
+      It is considered good programming practice to always declare variables
+      before use.
+    </p>
+
+    <p>
+      The general rules for constructing names for variables (unique
+      identifiers) are:
+    </p>
+    <ul>
+      <li>Names can contain letters, digits, underscores, and dollar signs.</li>
+      <li>Names must begin with a letter.</li>
+      <li>
+        Names can also begin with $ and _ (but we will not use it in this
+        tutorial).
+      </li>
+      <li>Names are case sensitive (y and Y are different variables).</li>
+      <li>
+        Reserved words (like JavaScript keywords) cannot be used as names.
+      </li>
+
+      <p>
+        In JavaScript, the equal sign (=) is an "assignment" operator, not an
+        "equal to" operator.
+      </p>
+    </ul>
+
+    <h1>JavaScript Variables</h1>
+    <p>Strings are written with quotes.</p>
+    <p>Numbers are written without quotes.</p>
+    <p id="demo30"></p>
+    <script>
+      const pi = 3.14;
+      let person = "John Doe";
+      let answer = "Yes I am!";
+      document.getElementById("demo30").innerHTML =
+        pi + "<br>" + person + "<br>" + answer;
+    </script>
+
+    <h2>Redeclaring a Variable Using let</h2>
+    <p id="demo31"></p>
+    <script>
+      let x31 = 10;
+      // Here x31 is 10
+      {
+        let x31 = 2;
+        // Here x31 is 2
+      }
+      // Here x31 is 10
+      document.getElementById("demo31").innerHTML = x31;
+    </script>
+
+    <h2>JavaScript const</h2>
+    <p>Declaring a constant array does NOT make the elements unchangeable:</p>
+    <p id="demo32"></p>
+    <script>
+      // Create an Array:
+      const cars = ["Saab", "Volvo", "BMW"];
+      // Change an element:
+      cars[0] = "Toyota";
+      // Add an element:
+      cars.push("Audi");
+      // Display the Array:
+      document.getElementById("demo32").innerHTML = cars;
+    </script>
+
+    <h2>JavaScript const</h2>
+    <p>
+      Declaring a constant object does NOT make the objects properties
+      unchangeable:
+    </p>
+    <p id="demo33"></p>
+    <script>
+      // Create an object:
+      const car33 = { type: "Fiat", model: "500", color: "white" };
+      // Change a property:
+      car33.color = "red";
+      // Add a property:
+      car33.owner = "Johnson";
+      // Display the property:
+      document.getElementById("demo33").innerHTML =
+        "Car owner is " + car33.owner;
+    </script>
+
+    <h2>JavaScript Hoisting</h2>
+    <p>With <b>var</b>, you can use a variable before it is declared:</p>
+    <p id="demo34"></p>
+    <script>
+      carName = "Volvo";
+      document.getElementById("demo34").innerHTML = carName;
+      var carName;
+    </script>
+
+    <h2>JavaScript Hoisting</h2>
+    <p>With <b>const</b>, you cannot use a variable before it is declared:</p>
+    <p id="demo35"></p>
+    <script>
+      try {
+        alert(carName35);
+        const carName35 = "Volvo";
+      } catch (err35) {
+        document.getElementById("demo35").innerHTML = err35;
+      }
+    </script>
+
+    <h1>JavaScript String Operators</h1>
+    <p>All conditional operators can be used on both numbers and strings.</p>
+    <p id="demo36"></p>
+    <script>
+      let text136 = "A";
+      let text236 = "B";
+      let result36 = text136 < text236;
+      document.getElementById("demo36").innerHTML =
+        "Is A less than B? " + result36;
+    </script>
+
+    <h1>JavaScript String Operators</h1>
+    <p>Note that strings are compared alphabetically:</p>
+    <p id="demo37"></p>
+    <script>
+      let text137 = "20";
+      let text237 = "5";
+      let result37 = text137 < text237;
+      document.getElementById("demo37").innerHTML =
+        "Is 20 less than 5? " + result37;
+    </script>
+
+    <h1>JavaScript Assignments</h1>
+
+    <h2>Left Shift Assignment</h2>
+    <h3>The <<= Operator</h3>
+    <p id="demo39"></p>
+    <script>
+      let x39 = -100;
+      x39 <<= 5;
+      document.getElementById("demo39").innerHTML = "Value of x is: " + x39;
+    </script>
+
+    <h2>Right Shift Assignment</h2>
+    <h3>The >>= Operator</h3>
+    <p id="demo38"></p>
+    <script>
+      let x38 = -100;
+      x38 >>= 5;
+      document.getElementById("demo38").innerHTML = "Value of x is: " + x38;
+    </script>
+
+    <h1>JavaScript Functions</h1>
+    <p>Call a function which performs a calculation and returns the result:</p>
+    <p id="demo40"></p>
+    <script>
+      function myFunction(p1, p2) {
+        return p1 * p2;
+      }
+      let result = myFunction(4, 3);
+      document.getElementById("demo40").innerHTML = result;
+    </script>
+
+    <p>Invoke (call) a function that converts from Fahrenheit to Celsius:</p>
+    <p id="demo41"></p>
+    <script>
+      function toCelsius(f) {
+        return (5 / 9) * (f - 32);
+      }
+      let value = toCelsius(77);
+      document.getElementById("demo41").innerHTML = value;
+    </script>
+
+    <p>Using a function as a variable:</p>
+    <p id="demo42"></p>
+    <script>
+      let text = "The temperature is " + toCelsius(77) + " Celsius.";
+      document.getElementById("demo42").innerHTML = text;
+      function toCelsius(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+      }
+    </script>
+
+    <p>Outside myFunction() carName is undefined.</p>
+    <p id="demo43"></p>
+    <p id="demo44"></p>
+    <script>
+      let text44 = "Outside: " + typeof carName;
+      document.getElementById("demo43").innerHTML = text44;
+      function myFunction() {
+        let carName = "Volvo";
+        let text44 = "Inside: " + typeof carName + " " + carName;
+        document.getElementById("demo44").innerHTML = text44;
+      }
+      myFunction();
+    </script>
+
+    <h1>Creating JavaScript Objects</h1>
+    <h2>Using an Object Literal</h2>
+    <p id="demo45"></p>
+    <script>
+      // Create an Object:
+      const person45 = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+      // Display Data from the Object:
+      document.getElementById("demo45").innerHTML =
+        person45.firstName + " is " + person45.age + " years old.";
+    </script>
+
+    <h2>Using an Object Literal</h2>
+    <p id="demo46"></p>
+    <script>
+      // Create an empty Object
+      const person46 = {};
+      // Add Properties
+      person46.firstName = "John";
+      person46.lastName = "Doe";
+      person46.age = 50;
+      person46.eyeColor = "blue";
+      // Display Data from Object
+      document.getElementById("demo46").innerHTML =
+        person46.firstName + " is " + person46.age + " years old.";
+    </script>
+
+    <p>A method is a function definition stored as a property value.</p>
+
+    <p id="demo47"></p>
+    <script>
+      const person47 = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      document.getElementById("demo47").innerHTML = person47.fullName();
+    </script>
+
+    <h2>Objects are Mutable</h2>
+    <p>Changes to a copy of an object will also change the original object:</p>
+    <p id="demo48"></p>
+    <script>
+      // Create an Object
+      const person48 = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+      // Create a Copy
+      const x48 = person48;
+      // Change Age
+      x48.age = 10;
+      document.getElementById("demo48").innerHTML =
+        person48.firstName + " is " + person48.age + " years old.";
+    </script>
+
+    <h2>Adding a new Property</h2>
+    <p id="demo49"></p>
+    <script>
+      const person49 = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue",
+      };
+      person49.nationality = "English";
+      document.getElementById("demo49").innerHTML =
+        person49.firstname + " is " + person49.nationality + ".";
+    </script>
+
+    <h2>Deleting a Property</h2>
+    <p id="demo50"></p>
+    <script>
+      const person50 = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue",
+      };
+      delete person50.age;
+      document.getElementById("demo50").innerHTML =
+        person50.firstname + " is " + person50.age + " years old.";
+    </script>
+
+    <h2>Accessing Nested Objects</h2>
+    <p id="demo51"></p>
+    <script>
+      // Create nested Objects
+      const myObj = {
+        name: "John",
+        age: 30,
+        myCars: {
+          car1: "Ford",
+          car2: "BMW",
+          car3: "Fiat",
+        },
+      };
+      let p1 = "myCars";
+      let p2 = "car2";
+      document.getElementById("demo51").innerHTML = myObj[p1][p2];
+    </script>
+
+    <h2>Object Methods</h2>
+    <p>A method is a function definition stored as a property value.</p>
+    <p id="demo52"></p>
+    <script>
+      const person52 = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      document.getElementById("demo52").innerHTML = person52.fullName();
+    </script>
+
+    <p>An object method is a function definition stored as a property value.</p>
+    <p>If you access it without (), it will return the function definition:</p>
+    <p id="demo53"></p>
+    <script>
+      // Create an Object
+      const person53 = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      document.getElementById("demo53").innerHTML = person53.fullName;
+    </script>
+
+    <h2>Adding a Method</h2>
+    <p id="demo54"></p>
+    <script>
+      // Create an Object
+      const person54 = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+      };
+      // Add a Method
+      person54.name = function () {
+        return this.firstName + " " + this.lastName;
+      };
+      // Display Object Data
+      document.getElementById("demo54").innerHTML =
+        "My father is " + person54.name();
+    </script>
+
+    <p id="demo55"></p>
+    <script>
+      // Create an Object
+      const person55 = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+      };
+      // Add a Method
+      person55.name = function () {
+        return (this.firstName + " " + this.lastName).toUpperCase();
+      };
+      // Display Object Data
+      document.getElementById("demo55").innerHTML =
+        "My father is " + person55.name();
+    </script>
+
+    <p>Displaying a JavaScript object will output [object Object]:</p>
+
+    <p id="demo56"></p>
+
+    <script>
+      // Create an Object
+      const person56 = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+
+      // Display Object
+      document.getElementById("demo56").innerHTML = person56;
+    </script>
+
+    <p id="demo57"></p>
+    <script>
+      const person57 = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+      // Display Object Properties
+      document.getElementById("demo57").innerHTML =
+        "Name: " +
+        person57.name +
+        "<br>" +
+        "Age: " +
+        person57.age +
+        "<br>" +
+        "City: " +
+        person57.city;
+    </script>
+
+    <p id="demo58"></p>
+    <script>
+      const person58 = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+      // Display Object as JSON
+      document.getElementById("demo58").innerHTML = JSON.stringify(person58);
+    </script>
+
+    <h2>Displaying Properties</h2>
+    <p id="demo59"></p>
+    <script>
+      // Create an Object
+      const person59 = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+      // Display Properties
+      document.getElementById("demo59").innerHTML =
+        person59.name + ", " + person59.age + ", " + person59.city;
+    </script>
+
+    <h2>Display Properties</h2>
+    <p id="demo60"></p>
+    <script>
+      // Create an Object
+      const person60 = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+      // Build a Text
+      let text60 = "";
+      for (let x in person60) {
+        text60 += person60[x] + " ";
+      }
+      // Display the Text
+      document.getElementById("demo60").innerHTML = text60;
+    </script>
+
+    <h2>The Object.values() Method</h2>
+    <p>Object.values() returns an array of values from an object:</p>
+    <p id="demo61"></p>
+    <script>
+      // Create an Object
+      const person61 = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+      // Create an Array
+      const myArray61 = Object.values(person61);
+      // Display the Array
+      document.getElementById("demo61").innerHTML = myArray61;
+    </script>
+
+    <h2>The Object.entries() Method</h2>
+    <p>Object.entries() makes it simple to use objects in loops:</p>
+
+    <script>
+      const fruits61 = { Bananas: 300, Oranges: 200, Apples: 500 };
+      let text61 = "";
+      for (let [fruit61, amount61] of Object.entries(fruits61)) {
+        text61 += fruit61 + ": " + amount61 + "<br>";
+      }
+      document.getElementById("demo61").innerHTML = text61;
+    </script>
+    <p id="demo61"></p>
+
+    <h1>JavaScript Object Constructors</h1>
+    <p id="demo62"></p>
+
+    <script>
+      // Constructor Function for Person objects
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+      // Create a Person object
+      const myFather = new Person("John", "Doe", 50, "blue");
+      // Display age
+      document.getElementById("demo62").innerHTML =
+        "My father is " + myFather.age + ".";
+    </script>
+
+    <h1>JavaScript Object Constructors</h1>
+
+    <p id="demo63"></p>
+
+    <script>
+      // Constructor function for Person objects
+      function Person63(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+
+      // Create two Person objects
+      const myFather63 = new Person63("John", "Doe", 50, "blue");
+      const myMother63 = new Person63("Sally", "Rally", 48, "green");
+
+      // Display age
+      document.getElementById("demo63").innerHTML =
+        "My father is " +
+        myFather63.age +
+        ". My mother is " +
+        myMother63.age +
+        ".";
+    </script>
+
+    <p id="demo64"></p>
+    <script>
+      // Constructor function for Person objects
+      function Person64(first, last, age, eye, nationality) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+        this.nationality = nationality;
+      }
+      // Create 2 Person objects
+      const myFather64 = new Person64("John", "Doe", 50, "blue", "Ukraine");
+      const myMother64 = new Person64("Sally", "Rally", 48, "green", "English");
+      // Display nationality // document.getElementById("demo64").innerHTML = //
+      "My father is " + // myFather64.nationality + // ". My mother is " + //
+        myMother64.nationality; // document.getElementById("demo64").innerHTML = //
+      "My father is " + // myFather64.nationality + // ". My mother is " + //
+        myMother64.nationality;
+    </script>
+
+    <p id="demo65"></p>
+    <p id="demo66"></p>
+    <script>
+      // Constructor function for Person objects
+      function Person65(first, last, age, eye, nationality) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+        this.nationality = nationality;
+      }
+      // Create 2 Person objects
+      const myFather65 = new Person65("John", "Doe", 50, "blue", "Ukraine");
+      const myMother65 = new Person65("Sally", "Rally", 48, "green", "English");
+      // Display information about myFather64
+      document.getElementById(
+        "demo65"
+      ).textContent = `My Father's name is ${myFather65.firstName} ${myFather65.lastName},
+       age ${myFather65.age}, 
+       with ${myFather65.eyeColor} eyes, 
+       nationality ${myFather65.nationality}.`;
+
+      document.getElementById(
+        "demo66"
+      ).textContent = `My Mother's name is ${myMother65.firstName} ${myMother65.lastName},
+       age ${myMother65.age}, 
+       with ${myMother65.eyeColor} eyes, 
+       nationality ${myMother65.nationality}.`;
+    </script>
+
+    <p id="demo67"></p>
+    <script>
+      // Constructor Function for Person objects
+      function Person67(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+        this.fullName67 = function () {
+          return this.firstName + " " + this.lastName;
+        };
+      }
+      // Create a Person object
+      const myFather67 = new Person67("John", "Doe", 50, "blue");
+      // Display full name
+      document.getElementById("demo67").innerHTML =
+        "My father is " + myFather67.fullName67();
+    </script>
+
+    <p id="demo68"></p>
+
+    <script>
+      // Constructor function for Person Objects
+      function Person68(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+
+      // Create 2 Person objects
+      const myFather68 = new Person68("John", "Doe", 50, "blue");
+      const myMother68 = new Person68("Sally", "Rally", 48, "green");
+
+      // Add a Name Method
+      myMother68.changeName = function (name68) {
+        this.lastName = name68;
+      };
+
+      // Change Name
+      myMother68.changeName("Doe");
+
+      // Display fullName
+      document.getElementById("demo68").innerHTML =
+        "My mother's last name is " + myMother68.lastName;
+    </script>
+
+    <p id="demo69"></p>
+    <script>
+      // Constructor Function for Person Objects
+      function Person69(firstName, lastName, age, eyeColor) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.eyeColor = eyeColor;
+      }
+      // Create a Person Object
+      const myMother69 = new Person69("Sally", "Rally", 48, "green");
+      Person69.prototype.changeName = function (name69) {
+        this.lastName = name69;
+      };
+      // Change Name
+      myMother69.changeName("Doe");
+      // Display Name
+      document.getElementById("demo69").innerHTML =
+        "My mother's last name is " + myMother69.lastName;
+    </script>
+
+    <p id="demo70"></p>
+
+    <script>
+      // Display the Type
+      document.getElementById("demo70").innerHTML =
+        "<p>The typeof new Object() is " +
+        typeof new Object() +
+        "</p>" +
+        "<p>The typeof new Array() is " +
+        typeof new Array() +
+        "</p>" +
+        "<p>The typeof new Map() is " +
+        typeof new Map() +
+        "</p>" +
+        "<p>The typeof new Set() is " +
+        typeof new Set() +
+        "</p>" +
+        "<p>The typeof new Date() is " +
+        typeof new Date() +
+        "</p>" +
+        "<p>The typeof new RegExp() is " +
+        typeof new RegExp() +
+        "</p>" +
+        "<p>The typeof new Function() is " +
+        typeof new Function() +
+        "</p>";
+    </script>
+
+    <p id="demo71"></p>
+    <h2>The onclick Attribute</h2>
+    <button onclick="document.getElementById('demo71').innerHTML=Date()">
+      The time is?
+    </button>
+
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+
+    <p>Click the button to display the date.</p>
+    <p id="demo72"></p>
+    <button onclick="displayDate()">The time is?</button>
+    <script>
+      function displayDate() {
+        document.getElementById("demo72").innerHTML = Date();
+      }
+    </script>
+
+    <p>The escape sequence \" inserts a double quote in a string.</p>
+    <p id="demo73"></p>
+    <script>
+      let text73 = 'We are the so-called "Vikings" from the north.';
+      document.getElementById("demo73").innerHTML = text73;
+    </script>
+
+    <p>Templates allow multiline strings:</p>
+    <p id="demo74"></p>
+    <p>Templates are not supported in Internet Explorer.</p>
+    <script>
+      let text74 = `The quick
+brown fox
+jumps over
+the lazy dog`;
+
+      document.getElementById("demo74").innerHTML = text74;
+    </script>
+
+    <h2>The length Property</h2>
+    <p>The length of the string is:</p>
+    <p id="demo75"></p>
+    <script>
+      let text75 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      document.getElementById("demo75").innerHTML = text75.length;
+    </script>
+
+    <p>JavaScript will try to convert strings to numbers when dividing:</p>
+    <p id="demo76"></p>
+    <script>
+      let x76 = "100";
+      let y76 = "10";
+      let z76 = x76 / y76;
+      document.getElementById("demo76").innerHTML = z76;
+    </script>
+    <p id="demo77"></p>
+    <script>
+      let x77 = "100";
+      let y77 = "10";
+      let z77 = x77 * y77;
+      document.getElementById("demo77").innerHTML = z77;
+    </script>
+    <p id="demo78"></p>
+    <script>
+      let x78 = "100";
+      let y78 = "10";
+      let z78 = x78 - y78;
+      document.getElementById("demo78").innerHTML = z78;
+    </script>
+    <p id="demo79"></p>
+    <script>
+      let x79 = "100";
+      let y79 = "10";
+      let z79 = x79 + y79;
+      document.getElementById("demo79").innerHTML = z79;
+    </script>
+
+    <script>
+      let myNumber80 = 2;
+      while (myNumber80 != Infinity) {
+        myNumber80 = myNumber80 * myNumber80;
+        console.log(myNumber80);
+      }
+    </script>
+
+    <p id="demo81"></p>
+    <script>
+      let myNumber81 = 2;
+      let txt81 = "";
+      while (myNumber81 != Infinity) {
+        myNumber81 = myNumber81 * myNumber81;
+        txt81 = txt81 + myNumber81 + "\n";
+      }
+      document.getElementById("demo81").innerHTML = txt81;
+    </script>
+
+    <pre id="demo82"></pre>
+    <script>
+      let myNumber82 = 2;
+      let txt82 = "";
+      while (myNumber82 != Infinity) {
+        myNumber82 = myNumber82 * myNumber82;
+        txt81 = txt82 + myNumber82 + "\n";
+      }
+      document.getElementById("demo82").textContent = txt82;
+    </script>
+
+    <!-- ================================ -->
+
+    <div>
+      <hr />
+      <table border="0">
+        <tbody>
+          <tr>
+            <td>
+              <div style="text-align: center">
+                <strong
+                  ><a
+                    class="tablerow"
+                    title="Интеллектуальный психологический клуб "
+                    href="https://www.psyoffice.ru/temenos.html"
+                    target="_blank"
+                    ><span style="font-size: medium"
+                      ><span
+                        style="font-family: 'arial', 'helvetica', sans-serif"
+                        >Интеллектуальный психологический клуб "ТЕМЕНОС"</span
+                      ></span
+                    ></a
+                  ></strong
+                ><span style="font-size: small"> </span
+                ><img
+                  style="
+                    vertical-align: top;
+                    border-top-color: #000000;
+                    border-left-color: #000000;
+                    border-right-color: #000000;
+                    border-bottom-color: #000000;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-bottom-width: 0px;
+                    border-top-style: none;
+                    border-left-style: none;
+                    border-right-style: none;
+                    border-bottom-style: none;
+                    float: right;
+                  "
+                  longdesc="https://www.psyoffice.ru/temenos.html"
+                  src="https://www.psyoffice.ru/uploads/posts/2010-11/1290194446_temenos-100.jpg"
+                  alt="ТЕМЕНОС"
+                />
+              </div>
+              <span style="font-size: small"> </span>
+              <div style="text-align: left">
+                <span style="font-size: small"
+                  >&nbsp;Интеллектуальный психологический клуб
+                  &laquo;ТЕМЕНОС&raquo; объединяет профессиональных психологов с
+                  многолетним опытом практической работы. Именно многолетняя
+                  постоянная</span
+                ><span style="font-size: small"
+                  >&nbsp;практика, наряду с научной и публицистической
+                  деятельностью, делает психолога по-настоящему компетентным
+                  консультантом.</span
+                >
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div style="text-align: right">
+                <strong
+                  >&nbsp;<a
+                    class="tablerow"
+                    title="ТЕМЕНОС"
+                    href="https://www.psyoffice.ru/temenos.html"
+                    target="_blank"
+                    >Подробнее:</a
+                  ></strong
+                >
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- ============================================================ -->
+
+    <!-- <script>
+      const numbers = [4, 9, 16, 25, 29];
+
+      let first = numbers.find((value, index, array) => {
+        console.log(`Масив:`, array);
+        return value > 18;
+      });
+    </script> -->
+
+    <script>
+      const numbers = [4, 9, 16, 25, 29];
+      console.log("Масив:", numbers); // Виведе один раз
+
+      let first = numbers.find((value) => value > 18);
+    </script>
+
+    <h1>JavaScript Arrays</h1>
+    <h2>The sort() Method</h2>
+
+    <p>Click the buttons to sort the array alphabetically or numerically.</p>
+
+    <button onclick="myFunction1()">Sort Alphabetically</button>
+    <button onclick="myFunction2()">Sort Numerically</button>
+
+    <p id="demo83"></p>
+
+    <script>
+      const points = [40, 100, 1, 5, 25, 10];
+      document.getElementById("demo83").innerHTML = points;
+
+      function myFunction1() {
+        points.sort();
+        document.getElementById("demo83").innerHTML = points;
+      }
+      function myFunction2() {
+        points.sort(function (a, b) {
+          return a - b;
+        });
+        document.getElementById("demo83").innerHTML = points;
+      }
+    </script>
+  </body>
+</html>
